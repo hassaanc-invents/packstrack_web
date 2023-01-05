@@ -6,7 +6,6 @@ session_destroy();
 ?>
 <!doctype html>
 <html lang="en">
-
 <head>
   <title>Packstrack</title>
   <meta charset="utf-8">
@@ -46,8 +45,8 @@ session_destroy();
                       $finalFileOpen =  strtolower(str_replace(' ', '', $fileOpen));
                   ?>
                       <div class="col-md-4 col-sm-6 col-lg-3 mt-4 text-center">
-                        <div class="bg-white rounded shadow-sm py-2 h-100 text-center py-5"><img src="<?php echo "./uploaded_files/" . $getSingleTrackCategory['blog_image_path']; ?>" alt="" width="100" height="50px" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
-                          <h6 class="mb-0"><?php echo $getSingleTrackCategory['tracking_site_name']; ?></h6><span class="small text-muted"><a href="<?php echo $finalFileOpen; ?>" class="text-muted" style="font-size:15px;"><u>Track</u></a></span>
+                        <div class="bg-white rounded shadow-sm py-2 h-100 text-center py-5"><a href="<?php echo $finalFileOpen; ?>"><img src="<?php echo "./uploaded_files/" . $getSingleTrackCategory['blog_image_path']; ?>" alt="" width="100" height="50px" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"></a>
+                          <h6 class="mb-0"><a href="<?php echo $finalFileOpen; ?>" class="text-muted"><?php echo $getSingleTrackCategory['tracking_site_name']; ?></a></h6><span class="small text-muted"><a href="<?php echo $finalFileOpen; ?>" class="text-muted" style="font-size:15px;"><u>Track</u></a></span>
                         </div>
                       </div>
                     <?php
