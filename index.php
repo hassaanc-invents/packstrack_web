@@ -6,9 +6,8 @@ session_destroy();
 ?>
 <!doctype html>
 <html lang="en">
-
 <head>
-<meta name="google-site-verification" content="-Sbp2kb0u3gmLGhTEmk-Xx3q1pg5zg8AhEMfb7TmUUg" />
+  <meta name="google-site-verification" content="-Sbp2kb0u3gmLGhTEmk-Xx3q1pg5zg8AhEMfb7TmUUg" />
   <title>Packstrack</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -43,7 +42,6 @@ session_destroy();
                 <p class=" text-muted mb-4">
                   On our website, you will be able to track your package immediately without wasting time, and here it is very simple and easy for you to track your package. You must have the tracking number of your package with which you can track your package. You have to enter your tracking number in our Search Bar and select your carrier then press the track button. In no time you will receive your package's current location. If you have any problem or your package gets lost or goes to the wrong one, we will give you the contact number and email of the courier so that you can contact them.
                 </p>
-                
               </div>
             </div>
           </div>
@@ -57,7 +55,7 @@ session_destroy();
           <?php
           $trackCategoryQuery = "SELECT * FROM blog_information ORDER BY blog_id DESC Limit 8";
           $runTrackCategoryQuery = mysqli_query($conn, $trackCategoryQuery);
-          $totalRecords = 0 ;
+          $totalRecords = 0;
           if (mysqli_num_rows($runTrackCategoryQuery) > 0) {
             while ($getSingleTrackCategory = mysqli_fetch_assoc($runTrackCategoryQuery)) {
               $totalRecords = $totalRecords + 1;
@@ -65,8 +63,8 @@ session_destroy();
               $finalFileOpen =  strtolower(str_replace(' ', '', $fileOpen));
           ?>
               <div class="col-lg-3 col-sm-6 mb-5">
-              <div class="bg-white rounded shadow-sm py-5 h-100"><img src="<?php echo "./uploaded_files/" . $getSingleTrackCategory['blog_image_path']; ?>" alt="" width="100" height="100px" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
-                  <h6 class="mb-0"><?php echo $getSingleTrackCategory['tracking_site_name']; ?></h6><span class="small text-muted"><a href="<?php echo $finalFileOpen; ?>" class="text-muted"><u>Track</u></a></span>
+                <div class="bg-white rounded shadow-sm py-5 h-100"><a href="<?php echo $finalFileOpen; ?>" class="text-muted"><img src="<?php echo "./uploaded_files/" . $getSingleTrackCategory['blog_image_path']; ?>" alt="" width="100" height="100px" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"></a>
+                  <h6 class="mb-0"><a href="<?php echo $finalFileOpen; ?>" class="text-muted"><?php echo $getSingleTrackCategory['tracking_site_name']; ?></a></h6><span class="small text-muted"><a href="<?php echo $finalFileOpen; ?>" class="text-muted"><u>Track</u></a></span>
                 </div>
               </div>
           <?php
@@ -75,9 +73,9 @@ session_destroy();
           ?>
         </div>
         <?php
-        if(!$totalRecords<8){
+        if (!$totalRecords < 8) {
         ?>
-        <a href="trackingcompanies" class="btn btn-warning px-5 rounded-pill shadow-sm mb-5">Learn More</a>
+          <a href="trackingcompanies" class="btn btn-warning px-5 rounded-pill shadow-sm mb-5">Learn More</a>
         <?php
         }
         ?>
@@ -88,5 +86,4 @@ session_destroy();
   include "scripts.php";
   ?>
 </body>
-
 </html>
