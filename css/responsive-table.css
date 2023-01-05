@@ -5,6 +5,7 @@ table {
     padding: 0;
     width: 100%;
     table-layout: fixed;
+    word-break: break-word;
   }
   table caption {
     font-size: 1.5em;
@@ -25,7 +26,7 @@ table {
     letter-spacing: .1em;
     text-transform: uppercase;
   }
-  @media screen and (max-width: 600px) {
+  /* @media screen and (max-width: 600px) {
     table {
       border: 0;
     }
@@ -62,4 +63,4 @@ table {
     table td:last-child {
       border-bottom: 0;
     }
-  }
+  } */
