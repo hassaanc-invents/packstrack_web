@@ -41,7 +41,7 @@ $blogTitleResult = mysqli_query($conn, $blogTitleQuery);
             <div class="row">
                 <div class="col-md-5 mb-2">
                     <a href="addBlogModal?edit=false&editid=false&fileName=false" class="btn btn-dark btn-block text-white">
-                        Add Artical ( NO API )
+                        Add Artical
                     </a>
                 </div>
                 <div class="col-md-5 mb-2">

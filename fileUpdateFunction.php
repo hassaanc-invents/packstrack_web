@@ -2,6 +2,7 @@
         // ..................Site Name and URL Redirection.................
         $blog_detailBefore = $blog_detail[3];
         $blog_detailAfter = $blog_detail[4];
+        $blog_detailMetaData = $blog_detail[7];
         $getIdQuery = "SELECT * FROM blog_information WHERE tracking_site_link='$blog_detail[2]' ";
         $getIdQueryRun = mysqli_query($conn, $getIdQuery);
         $finalBlogId;
@@ -40,7 +41,7 @@
         }
         ?>';
         // ......................PHP File Create...........................
-        $pageMarkupComplete = $markupBeforeForm. $urLDirectionPhpScript .  $blog_detailBefore  . $submitForm . $blog_detailAfter . $markupAfterForm;
+        $pageMarkupComplete = $markupBeforeForm.$blog_detailMetaData.$markupMidData. $urLDirectionPhpScript .  $blog_detailBefore  . $submitForm . $blog_detailAfter . $markupAfterForm;
         $fileCreate = fopen($finalFileName, 'w');
         fwrite($fileCreate, $pageMarkupComplete);
         fclose($fileCreate);

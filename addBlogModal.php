@@ -4,7 +4,7 @@ check_login($conn);
 $isUpdate = $_GET['edit'];
 $updateId = $_GET['editid'];
 $fileName = $_GET['fileName'];
-$submitBlogValues = array("", "", "", "", "", "", "", "");
+$submitBlogValues = array("", "", "", "", "", "", "", "", "");
 if ($isUpdate == "true") {
     $getBlogFromDb = "SELECT * FROM blog_information WHERE blog_id= '$updateId'";
     $runBlogQuery =  mysqli_query($conn, $getBlogFromDb);
@@ -18,6 +18,7 @@ if ($isUpdate == "true") {
             $submitBlogValues[5] = $getSingleEditBlog['linked_tracking'];
             $submitBlogValues[6] = $getSingleEditBlog['tracking_site_phone'];
             $submitBlogValues[7] = $getSingleEditBlog['tracking_site_display_link'];
+            $submitBlogValues[8] = $getSingleEditBlog['blog_meta_data'];
         }
     }
 }
@@ -83,9 +84,16 @@ if ($isUpdate == "true") {
                         </div>
                     </div>
                     <div class="form-group">
+                        <label for="blogData">Add Meta Data</label>
+                        <textarea name="blogMetaDesc" id="blogMetaDesc" class="form-control" rows="8"><?php echo $submitBlogValues[8] ?></textarea>
+                    </div>
+                    <!-- Being Used in PHP Code But Not Needed for Implementing -->
+                    <div class="form-group d-none">
                         <label for="blogData">Add Markup Before Tracking</label>
                         <textarea name="blogData" id="blogData" class="form-control" rows="8"><?php echo $submitBlogValues[3] ?></textarea>
                     </div>
+                    <!-- Being Used in PHP Code But Not Needed for Implementing -->
+
                     <div class="form-group">
                         <label for="blogAfter">Add Markup After Tracking</label>
                         <textarea name="blogAfter" id="blogAfter" class="form-control" rows="8"><?php echo $submitBlogValues[4] ?></textarea>
