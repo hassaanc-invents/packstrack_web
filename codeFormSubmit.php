@@ -26,7 +26,7 @@ if (isset($_POST['blogSubmit'])) {
     $imageName = mysqli_real_escape_string($conn, $_FILES['includeImage']['name']);
     $exe = explode(".", $imageName);
     $picextension = strtolower($exe[1]);
-    $format = array("png", "jpg", "jpeg");
+    $format = array("png", "jpg", "jpeg", "webp");
     if (in_array($picextension, $format)) {
         move_uploaded_file($_FILES['includeImage']['tmp_name'], "uploaded_files/" . $imageName);
     }
@@ -43,15 +43,25 @@ if (isset($_POST['blogSubmit'])) {
     if ($editOrSave == "true") {
         $updateBlogId = $_GET['editid'];
         $oldFileName = $_GET['fileName'];
-        if($imageName!=""){
+        if ($imageName != "") {
+            $deleteUploadedImageQuery = "SELECT blog_image_path FROM blog_information WHERE blog_id='$updateBlogId'";
+            $runImagePathQuery = mysqli_query($conn, $deleteUploadedImageQuery);
+            if (mysqli_num_rows($runImagePathQuery) > 0) {
+                while ($singleImagePath = mysqli_fetch_assoc($runImagePathQuery)) {
+                    $imageDeleted = unlink('./uploaded_files/' . $singleImagePath['blog_image_path']);
+                }
+            }
+            if (!$status) {
+                echo "Sorry File Cant be deleted";
+            }
             $updateBlogQuery = "UPDATE blog_information
             SET blog_title = '{$blog_detail[0]}', tracking_site_name = '{$blog_detail[1]}', tracking_site_link = '{$blog_detail[2]}', blog_image_path = '{$imageName}', blog_markup_before = '{$blogDataBeforeForm}', blog_markup_after = '{$blogDataAfterForm}', linked_tracking = '{$linkedTrack}'
             WHERE blog_id = '$updateBlogId'";
-           } else {
+        } else {
             $updateBlogQuery = "UPDATE blog_information
             SET blog_title = '{$blog_detail[0]}', tracking_site_name = '{$blog_detail[1]}', tracking_site_link = '{$blog_detail[2]}',tracking_site_phone = '{$blog_detail[5]}',tracking_site_display_link = '{$blog_detail[6]}', blog_markup_before = '{$blogDataBeforeForm}', blog_markup_after = '{$blogDataAfterForm}', linked_tracking = '{$linkedTrack}'
             WHERE blog_id = '$updateBlogId'";
-           }
+        }
         $runUpdateQuery = mysqli_query($conn, $updateBlogQuery);
         rename($finalFileName, $oldFileName);
         $status = unlink($oldFileName);
