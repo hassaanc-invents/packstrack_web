@@ -17,6 +17,8 @@ session_destroy();
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive-table.css">
   <link rel="icon" type="image/x-icon" href="./images/trackingLogo.png">
+  ';
+$markupMidData = '
 </head>
 <body>
   <div class="wrapper d-flex align-items-stretch" style="overflow-x: hidden;">
