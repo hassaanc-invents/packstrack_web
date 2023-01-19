@@ -39,24 +39,43 @@ $blogTitleResult = mysqli_query($conn, $blogTitleQuery);
         </div>
         <div class="col-md-9">
             <div class="row">
-                <div class="col-md-5 mb-2">
+                <div class="col-md-4 mb-2">
                     <a href="addBlogModal?edit=false&editid=false&fileName=false" class="btn btn-dark btn-block text-white">
                         Add Artical
                     </a>
                 </div>
-                <div class="col-md-5 mb-2">
+                <div class="col-md-4 mb-2">
                     <button type="button" class="btn btn-dark btn-block" data-toggle="modal" data-target="#blogModalVisits">
                         View Visits
                     </button>
                 </div>
-                <div class="col-md-2 mb-2">
-                    <a href="logout" class="btn btn-dark btn-block text-white">
-                        Logout
-                    </a>
-                </div>
+                <?php
+                if (isset($_SESSION['websitesecurity_hasing'])) {
+                ?>
+                    <div class="col-md-2 mb-2">
+                        <a href="approve-admin" class="btn btn-dark btn-block text-white">
+                            Approval
+                        </a>
+                    </div>
+                    <div class="col-md-2 mb-2">
+                        <a href="logout" class="btn btn-dark btn-block text-white">
+                            Logout
+                        </a>
+                    </div>
+                <?php
+                } else {
+                ?>
+                    <div class="col-md-4 mb-2">
+                        <a href="logout" class="btn btn-dark btn-block text-white">
+                            Logout
+                        </a>
+                    </div>
+                <?php
+                }
+                ?>
             </div>
             <div class="row px-3 mt-3 custom-scroll-bar" style="max-height: 380px; overflow:auto">
-                <table class="table table-striped" >
+                <table class="table table-striped">
                     <thead class="thead-dark">
                         <tr>
                             <th class="col-sm-8">Recent Blogs</th>
@@ -139,14 +158,14 @@ $blogTitleResult = mysqli_query($conn, $blogTitleQuery);
                                     echo $totalVisits;
                                     ?>
                                 </h4>
-                                
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="modal-footer d-flex justify-content-between">
-                <a class="btn btn-success px-5" href=<?php echo "vistordetails"?>>Details</a>
+                <a class="btn btn-success px-5" href=<?php echo "vistordetails" ?>>Details</a>
                 <button type="button" class="btn btn-warning px-5 text-light" data-dismiss="modal">Close</button>
             </div>
         </div>

