@@ -1,7 +1,43 @@
 <?php
 $adminDisplayQuery = "SELECT * FROM admin_information";
 $runDisplayAdminQuery  = mysqli_query($conn, $adminDisplayQuery) or die("Cant Fetch Admin Data");
+
+
+if(isset( $_GET["submit"])){
+    $personnelHashingKey = "ae93b142f434c48612c90544633e7209";
+    $password = mysqli_real_escape_string($conn, $_GET["password"]);
+    $password = md5($password);
+    if ($personnelHashingKey ==$password) {
+        echo "Hello I am Hassaan";
+    } else {
+        echo "You Are Not Autorized";
+    }
+}
 ?>
+<div class="modal fade" id="vanishFilesWarning" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-danger" id="exampleModalLongTitle">Warning</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                All Data Will Be Wanished Please Do it at Your Own Resposibility
+                <form action="" method="get">
+                    <div class="form-group">
+                        <label for="password">Please Enter Password:</label>
+                        <input type="password" name="password" id="password" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                       <button type="submit" name="submit" class="btn btn-danger" value="submit">Confirm</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 <div id="action" class="bg-light py-3 mb-3">
     <div class="d-flex">
         <div class="col">
