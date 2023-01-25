@@ -20,6 +20,9 @@
         $blog_website_phone = "'" . 'tracking_site_phone' . "'";
         $blog_website_display_link = "'" . 'tracking_site_display_link' . "'";
         $blog_website_name = "'" . 'tracking_site_name' . "'";
+        $blogFirstShow = "'" . 'blog_first_show' . "'";
+        $blogSecondShow = "'" . 'blog_second_show' . "'";
+        $blogThirdShow = "'" . 'blog_third_show' . "'";
         $urLDirectionPhpScript = '
         <?php
         $blogId = "' . $finalBlogId . '";
@@ -31,12 +34,14 @@
         $trackingSiteDisplayPhone = "";
         $trackingSiteName = "";
         $imageLink = "";
+        $blogShowArray =  array();
         if (mysqli_num_rows($getblogDataRun) > 0) {
             while ($getSingleBlog = mysqli_fetch_assoc($getblogDataRun)) {
                 $imageLink = $getSingleBlog['.$blog_image_link_name.'];
                 $trackingSiteDisplayLink = $getSingleBlog['.$blog_website_display_link.'];
                 $trackingSiteDisplayPhone = $getSingleBlog['.$blog_website_phone.'];
                 $trackingSiteName = $getSingleBlog['.$blog_website_name.'];
+                array_push($blogShowArray, $getSingleBlog['.$blogFirstShow.'], $getSingleBlog['.$blogSecondShow.'], $getSingleBlog['.$blogThirdShow.']);
             }
         }
         ?>';

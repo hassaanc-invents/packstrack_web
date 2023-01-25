@@ -17,7 +17,7 @@ $editOrSave = $_GET['edit'];
 // <!-- Blog Data Submit Into Databases -->
 if (isset($_POST['blogSubmit'])) {
     check_login($conn);
-    $blog_detail = array($_POST['blogTitle'], $_POST['siteName'], $_POST['siteLink'], $_POST['blogData'], $_POST['blogAfter'], $_POST['displayPhone'], $_POST['displayLink'], $_POST['blogMetaDesc']);
+    $blog_detail = array($_POST['blogTitle'], $_POST['siteName'], $_POST['siteLink'], $_POST['blogData'], $_POST['blogAfter'], $_POST['displayPhone'], $_POST['displayLink'], $_POST['blogMetaDesc'], $_POST['first_ref'], $_POST['second_ref'], $_POST['third_ref']);
     $blogMarkupAfterForm = $_POST['blogAfter'];
     $blogPageMetaData = $_POST['blogMetaDesc'];
     $linkedTrack = $_POST['linked_track'];
@@ -37,8 +37,8 @@ if (isset($_POST['blogSubmit'])) {
     $fileName = strtolower($blog_detail[1] . '.php');
     $finalFileName = str_replace(' ', '', $fileName);
     if ($editOrSave == "false") {
-        $blogDetailQuery = "INSERT INTO blog_information(blog_title, tracking_site_name, tracking_site_link, tracking_site_phone, tracking_site_display_link, blog_image_path, blog_markup_before, blog_markup_after, blog_meta_data, linked_tracking)
-    VALUES('{$blog_detail[0]}','{$blog_detail[1]}','{$blog_detail[2]}','{$blog_detail[5]}', '{$blog_detail[6]}', '{$imageName}','{$blogDataBeforeForm}','{$blogDataAfterForm}', '{$blogDataMetaData}', '{$linkedTrack}')";
+        $blogDetailQuery = "INSERT INTO blog_information(blog_title, tracking_site_name, tracking_site_link, tracking_site_phone, tracking_site_display_link, blog_image_path, blog_markup_before, blog_markup_after, blog_meta_data, linked_tracking, blog_first_show, blog_second_show, blog_third_show)
+    VALUES('{$blog_detail[0]}','{$blog_detail[1]}','{$blog_detail[2]}','{$blog_detail[5]}', '{$blog_detail[6]}', '{$imageName}','{$blogDataBeforeForm}','{$blogDataAfterForm}', '{$blogDataMetaData}', '{$linkedTrack}', '{$blog_detail[8]}' , '{$blog_detail[9]}', '{$blog_detail[10]}')";
         $result2 = mysqli_query($conn, $blogDetailQuery);
         include "fileUpdateFunction.php";
     }
@@ -57,11 +57,11 @@ if (isset($_POST['blogSubmit'])) {
                 echo "Sorry File Cant be deleted";
             }
             $updateBlogQuery = "UPDATE blog_information
-            SET blog_title = '{$blog_detail[0]}', tracking_site_name = '{$blog_detail[1]}', tracking_site_link = '{$blog_detail[2]}', blog_image_path = '{$imageName}', blog_markup_before = '{$blogDataBeforeForm}', blog_markup_after = '{$blogDataAfterForm}', blog_meta_data = '{$blogDataMetaData}', linked_tracking = '{$linkedTrack}'
+            SET blog_title = '{$blog_detail[0]}', tracking_site_name = '{$blog_detail[1]}', tracking_site_link = '{$blog_detail[2]}', blog_image_path = '{$imageName}', blog_markup_before = '{$blogDataBeforeForm}', blog_markup_after = '{$blogDataAfterForm}', blog_meta_data = '{$blogDataMetaData}', linked_tracking = '{$linkedTrack}', blog_first_show = '{$blog_detail[8]}', blog_second_show ='{$blog_detail[9]}', blog_third_show = '{$blog_detail[10]}'
             WHERE blog_id = '$updateBlogId'";
         } else {
             $updateBlogQuery = "UPDATE blog_information
-            SET blog_title = '{$blog_detail[0]}', tracking_site_name = '{$blog_detail[1]}', tracking_site_link = '{$blog_detail[2]}',tracking_site_phone = '{$blog_detail[5]}',tracking_site_display_link = '{$blog_detail[6]}', blog_markup_before = '{$blogDataBeforeForm}', blog_markup_after = '{$blogDataAfterForm}', blog_meta_data = '{$blogDataMetaData}', linked_tracking = '{$linkedTrack}'
+            SET blog_title = '{$blog_detail[0]}', tracking_site_name = '{$blog_detail[1]}', tracking_site_link = '{$blog_detail[2]}',tracking_site_phone = '{$blog_detail[5]}',tracking_site_display_link = '{$blog_detail[6]}', blog_markup_before = '{$blogDataBeforeForm}', blog_markup_after = '{$blogDataAfterForm}', blog_meta_data = '{$blogDataMetaData}', linked_tracking = '{$linkedTrack}', blog_first_show = '{$blog_detail[8]}', blog_second_show= '{$blog_detail[9]}', blog_third_show = '{$blog_detail[10]}'
             WHERE blog_id = '$updateBlogId'";
         }
         $runUpdateQuery = mysqli_query($conn, $updateBlogQuery);

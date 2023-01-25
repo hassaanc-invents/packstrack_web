@@ -48,11 +48,52 @@ $submitForm = '
         include "trackForm.php";
 ?>
         ';
+
+$blog_website_name = "'" . 'tracking_site_name' . "'";
+$blog_image_link_name = "'" . 'blog_image_path' . "'";
+$blogId = "'" . 'blog_id' . "'";
 $markupAfterForm = '    
 </div>  
       </div>
       </div>
 </div>
+
+<!-- Tracking Sites -->
+ <h3 class=" text-muted text-center mt-4">Also Read About</h3>
+      <div class="container text-center pt-3">
+        <!-- Team item-->
+        <div class="row">
+          <?php
+          $getDiscriptionBlogQuery = "SELECT * FROM blog_information";
+          $discriptionBlogQueryRun = mysqli_query($conn, $getDiscriptionBlogQuery);
+          $referenceController = 0;
+          if (mysqli_num_rows($discriptionBlogQueryRun) > 0) {
+            while ($getSingleDisc = mysqli_fetch_assoc($discriptionBlogQueryRun)) {
+              if($blogShowArray[0]===$getSingleDisc[' . $blogId . '] || $blogShowArray[1]===$getSingleDisc[' . $blogId . '] || $blogShowArray[2]===$getSingleDisc[' . $blogId . ']){
+              $fileOpen = $getSingleDisc[' . $blog_website_name . '];
+              $finalFileOpen =  strtolower(str_replace(" ", "", $fileOpen));
+          ?>
+              <div class="col-lg-4 col-sm-6 mb-5">
+                <div class="bg-white rounded shadow-sm py-5 h-100"><a href="<?php echo $finalFileOpen; ?>" class="text-muted"><img src="<?php echo "./uploaded_files/" . $getSingleDisc[' . $blog_image_link_name . ']; ?>" alt="" width="100" height="100px" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"></a>
+                  <h6 class="mb-0"><a href="<?php echo $finalFileOpen; ?>" class="text-muted"><?php echo $getSingleDisc[' . $blog_website_name . ']; ?></a></h6><span class="small text-muted"><a href="<?php echo $finalFileOpen; ?>" class="text-muted"><u>Track</u></a></span>
+                </div>
+              </div>
+          <?php
+          $referenceController++;
+          }
+            }
+          }
+          if($referenceController ==0){
+            ?>
+            <div class="w-100">
+            <h5 class="text-center text-warning mb-4">No References Available</h5>
+            </div>
+            <?php
+          }
+          ?>
+        </div>
+      </div>
+
 <?php
 include "scripts.php";
 ?>
