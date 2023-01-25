@@ -59,7 +59,7 @@ $markupAfterForm = '
 </div>
 
 <!-- Tracking Sites -->
- <h3 class=" text-muted text-center mt-4">Also Read About</h3>
+ <h3 class=" text-muted text-center mt-4">You Can Also Track</h3>
       <div class="container text-center pt-3">
         <!-- Team item-->
         <div class="row">
