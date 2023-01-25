@@ -4,7 +4,11 @@ check_login($conn);
 $isUpdate = $_GET['edit'];
 $updateId = $_GET['editid'];
 $fileName = $_GET['fileName'];
-$submitBlogValues = array("", "", "", "", "", "", "", "", "");
+$submitBlogValues = array("", "", "", "", "", "", "", "", "", "", "", "");
+$showTotalBlogQuery = "SELECT * FROM blog_information";
+$runTotalBlogQuery = mysqli_query($conn, $showTotalBlogQuery);
+$runTotalBlogQueryClone = mysqli_query($conn, $showTotalBlogQuery);
+$runTotalBlogQueryCloneThird = mysqli_query($conn, $showTotalBlogQuery);
 if ($isUpdate == "true") {
     $getBlogFromDb = "SELECT * FROM blog_information WHERE blog_id= '$updateId'";
     $runBlogQuery =  mysqli_query($conn, $getBlogFromDb);
@@ -19,6 +23,9 @@ if ($isUpdate == "true") {
             $submitBlogValues[6] = $getSingleEditBlog['tracking_site_phone'];
             $submitBlogValues[7] = $getSingleEditBlog['tracking_site_display_link'];
             $submitBlogValues[8] = $getSingleEditBlog['blog_meta_data'];
+            $submitBlogValues[9] = $getSingleEditBlog['blog_first_show'];
+            $submitBlogValues[10] = $getSingleEditBlog['blog_second_show'];
+            $submitBlogValues[11] = $getSingleEditBlog['blog_third_show'];
         }
     }
 }
@@ -78,9 +85,78 @@ if ($isUpdate == "true") {
                         <div class="form-group col-sm-3">
                             <label for="exampleFormControlSelect1">Linked Tracking</label>
                             <select class="form-control" id="exampleFormControlSelect1" name="linked_track">
-                                <option value="false" <?php if($submitBlogValues[5]=="false") echo 'selected="selected"'; ?> >False</option>
-                                <option value="true" <?php if($submitBlogValues[5]=="true") echo 'selected="selected"'; ?>>True</option>
+                                <option value="false" <?php if ($submitBlogValues[5] == "false") echo 'selected="selected"'; ?>>False</option>
+                                <option value="true" <?php if ($submitBlogValues[5] == "true") echo 'selected="selected"'; ?>>True</option>
                             </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col">
+                            <label for="exampleFormControlSelect1">First Reference</label>
+                            <select class="form-control" id="exampleFormControlSelect1" name="first_ref">
+                                <option value="">Select</option>
+                                <?php
+                                if (mysqli_num_rows($runTotalBlogQuery) > 0) {
+                                    while ($getSingleBlog = mysqli_fetch_assoc($runTotalBlogQuery)) {
+                                ?>
+                                        <option value="<?php
+                                            echo $getSingleBlog['blog_id'] ?>"<?php
+                                            if ($submitBlogValues[9] == $getSingleBlog['blog_id'])
+                                            echo 'selected="selected"'; ?>>
+                                            <?php
+                                            echo $getSingleBlog['tracking_site_name'];
+                                            ?>
+                                        </option>
+                                <?php
+                                    }
+                                }
+                                ?>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-3">
+                            <label for="exampleFormControlSelect1">Second Reference</label>
+                            <select class="form-control" id="exampleFormControlSelect1" name="second_ref">
+                            <option value="">Select</option>
+                                <?php
+                                if (mysqli_num_rows($runTotalBlogQueryClone) > 0) {
+                                    while ($getSingleBlog = mysqli_fetch_assoc($runTotalBlogQueryClone)) {
+                                ?>
+                                        <option value="<?php
+                                            echo $getSingleBlog['blog_id'] ?>"<?php
+                                            if ($submitBlogValues[10] == $getSingleBlog['blog_id'])
+                                            echo 'selected="selected"'; ?>>
+                                            <?php
+                                            echo $getSingleBlog['tracking_site_name'];
+                                            ?>
+                                        </option>
+                                <?php
+                                    }
+                                }
+                                ?>
+                        </select>
+                        </div>
+                        <div class="form-group col-sm-3">
+                            <label for="exampleFormControlSelect1">Third Reference</label>
+                            <select class="form-control" id="exampleFormControlSelect1" name="third_ref">
+                            <option value="">Select</option>
+                                <?php
+                                if (mysqli_num_rows($runTotalBlogQueryCloneThird) > 0) {
+                                    while ($getSingleBlog = mysqli_fetch_assoc($runTotalBlogQueryCloneThird)) {
+                                ?>
+                                        <option value="<?php
+                                            echo $getSingleBlog['blog_id'] ?>"
+                                            <?php
+                                            if ($submitBlogValues[11] == $getSingleBlog['blog_id'])
+                                            echo 'selected="selected"'; ?>>
+                                            <?php
+                                            echo $getSingleBlog['tracking_site_name'];
+                                            ?>
+                                        </option>
+                                <?php
+                                    }
+                                }
+                                ?>    
+                        </select>
                         </div>
                     </div>
                     <div class="form-group">
