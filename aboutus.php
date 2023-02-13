@@ -36,7 +36,7 @@ session_destroy();
                     <div class="container py-5">
                         <div class="row align-items-center mb-5">
                             <div class="col order-2 order-lg-1"><i class="fa fa-bar-chart fa-2x mb-3 text-warning"></i>
-                                <p class=" text-muted mb-4">Worldtrack is the official order tracking website of the world's largest courier companies. We have real time tracker which will track and complete your order in few seconds. If you face any problem in tracking the order, we will tell you the solution. We will track your order and let you know where it is now and how long it will take to reach you.</p>
+                                <p class=" text-muted mb-4">Packstrack is the official order tracking website of the world's largest courier companies. We have real time tracker which will track and complete your order in few seconds. If you face any problem in tracking the order, we will tell you the solution. We will track your order and let you know where it is now and how long it will take to reach you.</p>
                                 <p class=" text-muted mb-4">
                                     We will tell you in detail about all courier services in the world. When did they start and in which country are they performing their services? Here we will provide you customer care support numbers of all courier companies. We will provide you with their original email and address of their main office and their branches.
                                 </p>
