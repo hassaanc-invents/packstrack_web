@@ -81,10 +81,10 @@ session_destroy();
                                 <div class="bg-white rounded shadow-sm py-5 px-4"><img src="./images/hassaanmaliq.png" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                                     <h5 class="mb-0">Hassaan Malick</h5><span class="small text-uppercase text-muted">Software Engineer - Founder</span>
                                     <ul class="social mb-0 list-inline mt-3">
-                                        <li class="list-inline-item"><a href="#" class="text-warning"><i class="fa fa-facebook-f"></i></a></li>
-                                        <li class="list-inline-item"><a href="#" class="text-warning"><i class="fa fa-twitter"></i></a></li>
-                                        <li class="list-inline-item"><a href="#" class="text-warning"><i class="fa fa-instagram"></i></a></li>
-                                        <li class="list-inline-item"><a href="#" class="text-warning"><i class="fa fa-linkedin"></i></a></li>
+                                        <li class="list-inline-item"><a href="https://www.facebook.com/hassaanmaliq" class="text-warning"><i class="fa fa-facebook-f"></i></a></li>
+                                        <li class="list-inline-item"><a href="https://twitter.com/hassaanmaliq" class="text-warning"><i class="fa fa-twitter"></i></a></li>
+                                        <li class="list-inline-item"><a href="https://www.instagram.com/hassaanmaliq" class="text-warning"><i class="fa fa-instagram"></i></a></li>
+                                        <li class="list-inline-item"><a href="https://pk.linkedin.com/in/hassaan-malick-2a169a202" class="text-warning"><i class="fa fa-linkedin"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
