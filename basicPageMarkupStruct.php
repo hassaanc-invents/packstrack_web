@@ -16,6 +16,7 @@ session_destroy();
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive-table.css">
+  <link rel="stylesheet" href="css/custom-scroll-bar.css">
   <link rel="icon" type="image/x-icon" href="./images/trackingLogo.png">
   ';
 $markupMidData = '
