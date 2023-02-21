@@ -15,6 +15,7 @@ session_destroy();
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/x-icon" href="./images/trackingLogo.png">
+  <meta name="msvalidate.01" content="E72E064DE948FE1027C2C02ED1AC31D8"/>
 </head>
 
 <body>
