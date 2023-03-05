@@ -36,7 +36,8 @@ $markupMidData = '
         ';
 $submitForm = '  
 <div class="row text-center">
-<div class="rounded m-auto"><img src="<?php echo "uploaded_files/" . $imageLink; ?>" alt="" width="150" height="150px" class="img-fluid rounded-circle  border-dark mb-3 img-thumbnail shadow-sm">
+<div class="rounded m-auto"><img src="<?php echo "uploaded_files/" . $imageLink; ?>" alt="';
+$submitFormAfterAlt = '" width="150" height="150px" class="img-fluid rounded-circle  border-dark mb-3 img-thumbnail shadow-sm">
 <h3 class="text-muted display-5"><?php echo $trackingSiteName;?></h3>
 <div class="d-flex justify-content-between">
 <span><b>Link: </b><a href="<?php echo $trackingSiteDisplayLink?>" class="text-muted" style="text-transform:lowercase" target="_blank"><?php echo $trackingSiteDisplayLink?></a></span>

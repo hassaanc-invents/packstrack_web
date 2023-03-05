@@ -4,7 +4,7 @@ check_login($conn);
 $isUpdate = $_GET['edit'];
 $updateId = $_GET['editid'];
 $fileName = $_GET['fileName'];
-$submitBlogValues = array("", "", "", "", "", "", "", "", "", "", "", "");
+$submitBlogValues = array("", "", "", "", "", "", "", "", "", "", "", "","");
 $showTotalBlogQuery = "SELECT * FROM blog_information";
 $runTotalBlogQuery = mysqli_query($conn, $showTotalBlogQuery);
 $runTotalBlogQueryClone = mysqli_query($conn, $showTotalBlogQuery);
@@ -26,6 +26,7 @@ if ($isUpdate == "true") {
             $submitBlogValues[9] = $getSingleEditBlog['blog_first_show'];
             $submitBlogValues[10] = $getSingleEditBlog['blog_second_show'];
             $submitBlogValues[11] = $getSingleEditBlog['blog_third_show'];
+            $submitBlogValues[12] = $getSingleEditBlog['image_alt_tag'];
         }
     }
 }
@@ -64,13 +65,17 @@ if ($isUpdate == "true") {
                         </div>
                     </div>
                     <div class="row">
-                        <div class="form-group col-6">
+                        <div class="form-group col-sm-4">
                             <label for="blogTitle">Display Phone Number</label>
                             <input type="text" name="displayPhone" id="blogTitle" class="form-control" value="<?php echo $submitBlogValues[6] ?>">
                         </div>
-                        <div class="form-group col-6">
+                        <div class="form-group col-sm-4">
                             <label for="siteName">Display Tracking Site</label>
                             <input type="text" name="displayLink" id="siteName" class="form-control" value="<?php echo $submitBlogValues[7] ?>">
+                        </div>
+                        <div class="form-group col-sm-4">
+                            <label for="altTagText">Alt Tag Text</label>
+                            <input type="text" name="altTagText" id="altTagText" class="form-control" value="<?php echo $submitBlogValues[12] ?>">
                         </div>
                     </div>
                     <div class="row">
