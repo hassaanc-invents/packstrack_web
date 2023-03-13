@@ -5,7 +5,7 @@ include "webcrawler.php";
 ?>
 <nav class="navbar navbar-expand-md navbar-light bg-dark text-light p-3 navbar-fixed-top">
     <a href="#" class="navbar-brand text-white">
-        <img src="./images/trackingLogo.png" width="80" alt="Packs Track">
+        <img src="./images/packstrack-logo.webp" width="90px" height="50px" alt="Packs Track">
         <span class="ml-2">Packs Track</span></a>
     <button class="navbar-toggler btn btn-primary ml-5 text-light py-2" type="button" data-toggle="collapse" data-target="#hostelnav" aria-controls="hostelnav" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fa fa-bars"></i>
