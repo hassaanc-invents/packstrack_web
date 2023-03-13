@@ -46,7 +46,7 @@
         }
         ?>';
         // ......................PHP File Create...........................
-        $pageMarkupComplete = $markupBeforeForm.$blog_detailMetaData.$markupMidData. $urLDirectionPhpScript .  $blog_detailBefore  . $submitForm . $blog_detailAfter . $markupAfterForm;
+        $pageMarkupComplete = $markupBeforeForm.$blog_detailMetaData.$markupMidData. $urLDirectionPhpScript .  $blog_detailBefore  . $submitForm. $altImageText.$submitFormAfterAlt . $blog_detailAfter . $markupAfterForm;
         $fileCreate = fopen($finalFileName, 'w');
         fwrite($fileCreate, $pageMarkupComplete);
         fclose($fileCreate);

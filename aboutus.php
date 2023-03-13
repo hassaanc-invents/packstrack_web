@@ -29,7 +29,7 @@ session_destroy();
                             <h1 class="display-4 text-muted">About Packs Track</h1>
                             <p class="lead text-muted mb-0">We will track your parcel.</p>
                         </div>
-                        <div class="col-lg-6 d-none d-lg-block"><img src="./images/aboutLogo.png" alt="" class="img-fluid"></div>
+                        <div class="col-lg-6 d-none d-lg-block"><img src="./images/packstrack-logo.webp" width="500px" height="300px" alt="" class="img-fluid"></div>
                     </div>
                 </div>
                 <div class="bg-white">
@@ -65,7 +65,7 @@ session_destroy();
                         <div class="row text-center mb-0">
                             <!-- Team item-->
                             <div class="col-xl-4 col-sm-6 mb-5">
-                                <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://bootstrapious.com/i/snippets/sn-about/avatar-4.png" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                                <div class="bg-white rounded shadow-sm py-5 px-4"><img src="./images/manuella-nevoresky.webp" alt="packstrack founder" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                                     <h5 class="mb-0">Manuella Nevoresky</h5><span class="small text-uppercase text-muted">CEO - Founder</span>
                                     <ul class="social mb-0 list-inline mt-3">
                                         <li class="list-inline-item"><a href="#" class="text-warning"><i class="fa fa-facebook-f"></i></a></li>
@@ -78,7 +78,7 @@ session_destroy();
                             <!-- End-->
                             <!-- Team item-->
                             <div class="col-xl-4 col-sm-6 mb-5">
-                                <div class="bg-white rounded shadow-sm py-5 px-4"><img src="./images/hassaanmaliq.png" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                                <div class="bg-white rounded shadow-sm py-5 px-4"><img src="./images/hassaanmaliq.webp" alt="packstrack developer" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                                     <h5 class="mb-0">Hassaan Malick</h5><span class="small text-uppercase text-muted">Software Engineer - Founder</span>
                                     <ul class="social mb-0 list-inline mt-3">
                                         <li class="list-inline-item"><a href="https://www.facebook.com/hassaanmaliq" class="text-warning"><i class="fa fa-facebook-f"></i></a></li>
@@ -91,7 +91,7 @@ session_destroy();
                             <!-- End-->
                             <!-- Team item-->
                             <div class="col-xl-4 col-sm-6 mb-5">
-                                <div class="bg-white rounded shadow-sm py-5 px-4"><img src="./images/ayazshareef.png" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                                <div class="bg-white rounded shadow-sm py-5 px-4"><img src="./images/ayazshareef.webp" alt="packstrack ceo" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                                     <h5 class="mb-0">Ayaz Shareef</h5><span class="small text-uppercase text-muted">CEO - Founder</span>
                                     <ul class="social mb-0 list-inline mt-3">
                                         <li class="list-inline-item"><a href="#" class="text-warning"><i class="fa fa-facebook-f"></i></a></li>
