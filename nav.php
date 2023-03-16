@@ -5,7 +5,7 @@ include "webcrawler.php";
 ?>
 <nav class="navbar navbar-expand-md navbar-light bg-dark text-light p-3 navbar-fixed-top">
     <a href="#" class="navbar-brand text-white">
-        <img src="./images/packstrack-logo.webp" width="90px" height="50px" alt="Packs Track">
+        <img src="./images/packstrack-logo.webp" width="60px" height="50px" alt="Packs Track">
         <span class="ml-2">Packs Track</span></a>
     <button class="navbar-toggler btn btn-primary ml-5 text-light py-2" type="button" data-toggle="collapse" data-target="#hostelnav" aria-controls="hostelnav" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fa fa-bars"></i>
@@ -46,3 +46,34 @@ include "webcrawler.php";
         </ul>
     </div>
 </nav>
+
+<!--  -->
+
+<div class="social">
+    <ul>
+        <li><a href="https://www.facebook.com/profile.php?id=100089150438649" target="_blank">
+                <i class="fa fa-facebook-f"></i>
+                <span>Facebook</span></a>
+        </li>
+        <li><a href="https://twitter.com/packtrack786" target="_blank">
+                <i class="fa fa-twitter"></i>
+                <span>Twitter</span></a>
+        </li>
+        <li><a href="https://www.instagram.com/packstrack/" target="_blank">
+                <i class="fa fa-instagram"></i>
+                <span>Instagram</span></a>
+        </li>
+        <li><a href="#">
+                <i class="fa fa-linkedin"></i>
+                <span>Linkedin</span></a>
+        </li>
+        <li><a href="#">
+                <i class="fa fa-github"></i>
+                <span>Github</span></a>
+        </li>
+        <li><a href="#">
+                <i class="fa fa-youtube"></i>
+                <span>Youtube</span></a>
+        </li>
+    </ul>
+</div>
