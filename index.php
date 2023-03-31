@@ -7,6 +7,9 @@ session_destroy();
 <!doctype html>
 <html lang="en">
 <head>
+     <!-- Google Adsense Verification Link -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3178647601743652"
+     crossorigin="anonymous"></script>
   <meta name="google-site-verification" content="-Sbp2kb0u3gmLGhTEmk-Xx3q1pg5zg8AhEMfb7TmUUg" />
   <title>Packstrack</title>
   <meta charset="utf-8">
@@ -76,7 +79,7 @@ session_destroy();
         <?php
         if (!$totalRecords < 8) {
         ?>
-          <a href="trackingcompanies" class="btn btn-warning px-5 rounded-pill shadow-sm mb-5">Learn More</a>
+          <a href="trackingcompanies" class="btn btn-warning px-5 rounded-pill shadow-sm mb-5">Track More</a>
         <?php
         }
         ?>

@@ -7,11 +7,11 @@ include "webcrawler.php";
     <a href="#" class="navbar-brand text-white">
         <img src="./images/packstrack-logo.webp" width="60px" height="50px" alt="Packs Track">
         <span class="ml-2">Packs Track</span></a>
-    <button class="navbar-toggler btn btn-primary ml-5 text-light py-2" type="button" data-toggle="collapse" data-target="#hostelnav" aria-controls="hostelnav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler btn btn-primary ml-5 text-light py-2" type="button" data-toggle="collapse" data-target="#packstracknav" aria-controls="packstracknav" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fa fa-bars"></i>
         <span class="sr-only">Toggle Menu</span>
     </button>
-    <div id="hostelnav" class="collapse navbar-collapse">
+    <div id="packstracknav" class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item active mr-3">
                 <a class="nav-link text-light" href="index">Home</a>
@@ -44,36 +44,13 @@ include "webcrawler.php";
                 <a class="nav-link text-light" href="contactus">Contact</a>
             </li>
         </ul>
+        <div class="social-media order-lg-last">
+      <p class="mb-0 d-flex social-media-controller">
+        <a href="https://www.facebook.com/profile.php?id=100089150438649" target="_blank" class="d-flex align-items-center justify-content-center nav-a"><span class="fa fa-facebook text-light"><i class="sr-only">Facebook</i></span></a>
+        <a href="https://twitter.com/packtrack786" target="_blank" class="d-flex align-items-center justify-content-center nav-a"><span class="fa fa-twitter text-light"><i class="sr-only">Twitter</i></span></a>
+        <a href="https://www.instagram.com/packstrack/" target="_blank" class="d-flex align-items-center justify-content-center nav-a"><span class="fa fa-instagram text-light"><i class="sr-only">Instagram</i></span></a>
+        <!-- <a href="https://twitter.com/packtrack786" target="_blank" class="d-flex align-items-center justify-content-center nav-a"><span class="fa fa-twitter text-light"><i class="sr-only">Twitter</i></span></a> -->
+      </p>
+    </div>
     </div>
 </nav>
-
-<!--  -->
-
-<div class="social">
-    <ul>
-        <li><a href="https://www.facebook.com/profile.php?id=100089150438649" target="_blank">
-                <i class="fa fa-facebook-f"></i>
-                <span>Facebook</span></a>
-        </li>
-        <li><a href="https://twitter.com/packtrack786" target="_blank">
-                <i class="fa fa-twitter"></i>
-                <span>Twitter</span></a>
-        </li>
-        <li><a href="https://www.instagram.com/packstrack/" target="_blank">
-                <i class="fa fa-instagram"></i>
-                <span>Instagram</span></a>
-        </li>
-        <li><a href="#">
-                <i class="fa fa-linkedin"></i>
-                <span>Linkedin</span></a>
-        </li>
-        <li><a href="#">
-                <i class="fa fa-github"></i>
-                <span>Github</span></a>
-        </li>
-        <li><a href="#">
-                <i class="fa fa-youtube"></i>
-                <span>Youtube</span></a>
-        </li>
-    </ul>
-</div>
