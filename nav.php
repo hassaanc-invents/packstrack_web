@@ -27,8 +27,7 @@ include "webcrawler.php";
                             $fileOpen = $sideBarSingleData['tracking_site_name'];
                             $finalFileOpen =  strtolower(str_replace(' ', '', $fileOpen));
                     ?>
-                            <a class="dropdown-item text-warning" href="<?php echo $finalFileOpen ?>"><?php echo $sideBarSingleData['tracking_site_name'] ?></a>
-                            </a>
+                            <a class="dropdown-item text-warning" href="<?php if ($sideBarSingleData['have_subdomain'] == 1){ echo $sideBarSingleData['tracking_site_link'];} else {echo $finalFileOpen;} ?>"><?php echo $sideBarSingleData['tracking_site_name'] ?></a>
                     <?php
                         }
                     }

@@ -38,10 +38,14 @@ if (isset($_POST['blogSubmit'])) {
     $fileName = strtolower($blog_detail[1] . '.php');
     $finalFileName = str_replace(' ', '', $fileName);
     if ($editOrSave == "false") {
-        $blogDetailQuery = "INSERT INTO blog_information(blog_title, tracking_site_name, tracking_site_link, tracking_site_phone, tracking_site_display_link, blog_image_path, blog_markup_before, blog_markup_after, blog_meta_data, linked_tracking, blog_first_show, blog_second_show, blog_third_show, image_alt_tag)
-    VALUES('{$blog_detail[0]}','{$blog_detail[1]}','{$blog_detail[2]}','{$blog_detail[5]}', '{$blog_detail[6]}', '{$imageName}','{$blogDataBeforeForm}','{$blogDataAfterForm}', '{$blogDataMetaData}', '{$linkedTrack}', '{$blog_detail[8]}' , '{$blog_detail[9]}', '{$blog_detail[10]}', '{$altImageText}')";
+        $blogDetailQuery = "INSERT INTO blog_information(blog_title, tracking_site_name, tracking_site_link, tracking_site_phone, tracking_site_display_link, blog_image_path, blog_markup_before, blog_markup_after, blog_meta_data, linked_tracking, blog_first_show, blog_second_show, blog_third_show, image_alt_tag, have_subdomain)
+    VALUES('{$blog_detail[0]}','{$blog_detail[1]}','{$blog_detail[2]}','{$blog_detail[5]}', '{$blog_detail[6]}', '{$imageName}','{$blogDataBeforeForm}','{$blogDataAfterForm}', '{$blogDataMetaData}', '{$linkedTrack}', '{$blog_detail[8]}' , '{$blog_detail[9]}', '{$blog_detail[10]}', '{$altImageText}', '{$_POST['have-sub-domain']}')";
         $result2 = mysqli_query($conn, $blogDetailQuery);
+        if($_POST['have-sub-domain']==0){
         include "fileUpdateFunction.php";
+        } else {
+        header("Location: $baseURL/dashboard");
+        }
     }
     if ($editOrSave == "true") {
         $updateBlogId = $_GET['editid'];
