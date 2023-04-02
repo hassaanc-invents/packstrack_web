@@ -56,7 +56,7 @@ $blogTitleResult = mysqli_query($conn, $blogTitleQuery);
                 </div>
             </div>
             <div class="row px-3 mt-3 custom-scroll-bar" style="max-height: 380px; overflow:auto">
-                <table class="table table-striped" >
+                <table class="table table-striped">
                     <thead class="thead-dark">
                         <tr>
                             <th class="col-sm-8">Recent Blogs</th>
@@ -76,7 +76,16 @@ $blogTitleResult = mysqli_query($conn, $blogTitleQuery);
                                     <td class="py-3 col-sm-2"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
                                             Delete
                                         </button></td>
-                                    <td class="py-3 col-sm-2"><a href="addBlogModal?edit=true&editid=<?php echo $blogTitleSingleResult['blog_id'] ?>&fileName=<?php echo $finalFileName ?>" class="btn btn-primary px-4">Edit</a></td>
+                                    <td class="py-3 col-sm-2"> <?php if ($blogTitleSingleResult['have_subdomain'] == 1) {
+                                                                ?>
+                                            <a href="#" class="btn btn-primary px-4">Not</a>
+                                        <?php
+                                                                } else {
+                                        ?>
+                                            <a href="addBlogModal?edit=true&editid=<?php echo $blogTitleSingleResult['blog_id'] ?>&fileName=<?php echo $finalFileName ?>" class="btn btn-primary px-4">Edit</a>
+                                        <?php
+                                                                } ?>
+                                    </td>
                                     <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
@@ -139,14 +148,14 @@ $blogTitleResult = mysqli_query($conn, $blogTitleQuery);
                                     echo $totalVisits;
                                     ?>
                                 </h4>
-                                
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="modal-footer d-flex justify-content-between">
-                <a class="btn btn-success px-5" href=<?php echo "vistordetails"?>>Details</a>
+                <a class="btn btn-success px-5" href=<?php echo "vistordetails" ?>>Details</a>
                 <button type="button" class="btn btn-warning px-5 text-light" data-dismiss="modal">Close</button>
             </div>
         </div>
