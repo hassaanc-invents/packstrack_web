@@ -99,7 +99,7 @@ if ($isUpdate == "true") {
                             <label for="exampleFormControlSelect1">Have Subdomian</label>
                             <select class="form-control" id="exampleFormControlSelect1" name="have-sub-domain">
                                 <option value="0" <?php if (!$submitBlogValues[13]) echo 'selected="selected"'; ?>>False</option>
-                                <option value="1" <?php if ($submitBlogValues[13]) echo 'selected="selected"'; ?>>True</option>
+                                <option value="1" <?php if ($submitBlogValues[13]) echo 'selected="selected"'; ?> disabled>True</option>
                             </select>
                         </div>
                     </div>
