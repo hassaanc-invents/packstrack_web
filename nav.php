@@ -42,6 +42,9 @@ include "webcrawler.php";
             <li class="nav-item mr-3">
                 <a class="nav-link text-light" href="contactus">Contact</a>
             </li>
+            <li class="nav-item mr-3">
+                <a class="nav-link text-light" href="privacypolicy">Privacy Policy</a>
+            </li>
         </ul>
         <div class="social-media order-lg-last">
       <p class="mb-0 d-flex social-media-controller">
