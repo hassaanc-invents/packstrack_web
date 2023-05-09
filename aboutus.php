@@ -49,7 +49,7 @@ session_destroy();
                                 <p class=" text-muted mb-4">
                                     This website will also give you a complete guide on what to do if your package gets damaged or lost during the transaction. We will tell you which courier company is providing the best services in your area so that you can take advantage of it. We will tell you how you can send your package to your friends or loved ones through any courier company and how much it will cost you.
                                 </p>
-                                <a href="#" class="btn btn-light px-5 rounded-pill shadow-sm bg-warning py-3">Learn More</a>
+                                <a href="privacypolicy" class="btn btn-light px-5 rounded-pill shadow-sm bg-warning py-3">Privacy Policy</a>
                             </div>
                         </div>
                     </div>

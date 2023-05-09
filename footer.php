@@ -7,7 +7,7 @@ $currentYear = date("Y");
             <div class="row">
                 <div class="col">
                     <p>
-                        Copyright &copy; <?php echo $currentYear ?>, <a href="logout" class="footerTracker">Tracker SYSTEM</a>
+                        Copyright &copy; <?php echo $currentYear ?>, <a href="logout" class="footerTracker">Packs Track</a>
                     </p>
                 </div>
             </div>

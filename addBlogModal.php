@@ -4,7 +4,7 @@ check_login($conn);
 $isUpdate = $_GET['edit'];
 $updateId = $_GET['editid'];
 $fileName = $_GET['fileName'];
-$submitBlogValues = array("", "", "", "", "", "", "", "", "", "", "", "","");
+$submitBlogValues = array("", "", "", "", "", "", "", "", "", "", "", "","", 0);
 $showTotalBlogQuery = "SELECT * FROM blog_information";
 $runTotalBlogQuery = mysqli_query($conn, $showTotalBlogQuery);
 $runTotalBlogQueryClone = mysqli_query($conn, $showTotalBlogQuery);
@@ -27,6 +27,7 @@ if ($isUpdate == "true") {
             $submitBlogValues[10] = $getSingleEditBlog['blog_second_show'];
             $submitBlogValues[11] = $getSingleEditBlog['blog_third_show'];
             $submitBlogValues[12] = $getSingleEditBlog['image_alt_tag'];
+            $submitBlogValues[13] = $getSingleEditBlog['have_subdomain'];
         }
     }
 }
@@ -79,7 +80,7 @@ if ($isUpdate == "true") {
                         </div>
                     </div>
                     <div class="row">
-                        <div class="form-group col">
+                        <div class="form-group col-sm-3">
                             <label for="siteLink">Tracking Site Link</label>
                             <input type="text" name="siteLink" id="siteLink" class="form-control" value="<?php echo $submitBlogValues[2] ?>">
                         </div>
@@ -92,6 +93,13 @@ if ($isUpdate == "true") {
                             <select class="form-control" id="exampleFormControlSelect1" name="linked_track">
                                 <option value="false" <?php if ($submitBlogValues[5] == "false") echo 'selected="selected"'; ?>>False</option>
                                 <option value="true" <?php if ($submitBlogValues[5] == "true") echo 'selected="selected"'; ?>>True</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-3">
+                            <label for="exampleFormControlSelect1">Have Subdomian</label>
+                            <select class="form-control" id="exampleFormControlSelect1" name="have-sub-domain">
+                                <option value="0" <?php if (!$submitBlogValues[13]) echo 'selected="selected"'; ?>>False</option>
+                                <option value="1" <?php if ($submitBlogValues[13]) echo 'selected="selected"'; ?> disabled>True</option>
                             </select>
                         </div>
                     </div>
