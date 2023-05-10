@@ -36,8 +36,8 @@ include "webcrawler.php";
                     <a href="trackingcompanies" class="dropdown-item text-warning">View All Companies</a>
                 </div>
             </li>
-            <li class="nav-item mr-3" disabled>
-                <a class="nav-link text-light" href="aboutus" disabled>About</a>
+            <li class="nav-item mr-3">
+                <a class="nav-link text-light" href="aboutus">About Us</a>
             </li>
             <li class="nav-item mr-3">
                 <a class="nav-link text-light" href="contactus">Contact</a>
