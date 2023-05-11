@@ -40,7 +40,7 @@ include "webcrawler.php";
                 <a class="nav-link text-light" href="aboutus">About Us</a>
             </li>
             <li class="nav-item mr-3">
-                <a class="nav-link text-light" href="contactus">Contact</a>
+                <a class="nav-link text-light" href="contactus">Contact Us</a>
             </li>
             <li class="nav-item mr-3">
                 <a class="nav-link text-light" href="privacypolicy">Privacy Policy</a>
