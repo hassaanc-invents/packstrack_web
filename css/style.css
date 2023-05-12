@@ -4655,7 +4655,7 @@ input[type="button"].btn-block {
   }
 }
 
-@media (min-width: 838px) {
+@media (min-width: 882px) {
   .navbar-expand-md {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;

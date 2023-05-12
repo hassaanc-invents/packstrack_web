@@ -40,19 +40,14 @@ include "webcrawler.php";
                 <a class="nav-link text-light" href="aboutus">About Us</a>
             </li>
             <li class="nav-item mr-3">
-                <a class="nav-link text-light" href="contactus">Contact</a>
+                <a class="nav-link text-light" href="contactus">Contact Us</a>
+            </li>
+            <li class="nav-item mr-3">
+                <a class="nav-link text-light" href="disclaimer">Disclaimer</a>
             </li>
             <li class="nav-item mr-3">
                 <a class="nav-link text-light" href="privacypolicy">Privacy Policy</a>
             </li>
         </ul>
-        <div class="social-media order-lg-last">
-      <p class="mb-0 d-flex social-media-controller">
-        <a href="https://www.facebook.com/profile.php?id=100089150438649" target="_blank" class="d-flex align-items-center justify-content-center nav-a"><span class="fa fa-facebook text-light"><i class="sr-only">Facebook</i></span></a>
-        <a href="https://twitter.com/packtrack786" target="_blank" class="d-flex align-items-center justify-content-center nav-a"><span class="fa fa-twitter text-light"><i class="sr-only">Twitter</i></span></a>
-        <a href="https://www.instagram.com/packstrack/" target="_blank" class="d-flex align-items-center justify-content-center nav-a"><span class="fa fa-instagram text-light"><i class="sr-only">Instagram</i></span></a>
-        <!-- <a href="https://twitter.com/packtrack786" target="_blank" class="d-flex align-items-center justify-content-center nav-a"><span class="fa fa-twitter text-light"><i class="sr-only">Twitter</i></span></a> -->
-      </p>
-    </div>
     </div>
 </nav>

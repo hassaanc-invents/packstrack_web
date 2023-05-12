@@ -8,7 +8,7 @@ session_destroy();
 <html lang="en">
 
 <head>
-  <title>Packstrack</title>
+  <title>Packstrack | Contact Us</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
@@ -25,9 +25,15 @@ session_destroy();
       <?php
       include "nav.php";
       ?>
-      <div class="main-conatiner">
-        <h2>Please Get in touch and our expert support team will answer all your questions.</h2>
-
+      <div class="main-conatiner pt-5">
+        <h1 class="display-4 text-muted">Contact Us</h1>
+            <p>Thank you for choosing PacksTrack as your go-to platform for worldwide courier tracking. We value your feedback, inquiries, and suggestions. Our dedicated support team is ready to assist you with any questions or concerns you may have.</p>
+            <p><strong>How Can We Help You?</strong></p>
+            <p>Whether you have a question about our tracking services, need assistance with a specific shipment, or want to provide feedback on your experience using PacksTrack, we're here to help. Our knowledgeable support staff is equipped to handle a wide range of inquiries and will provide prompt and reliable assistance.</p>
+            <p><strong>Contact Options:</strong></p>
+            <p>To get in touch with our team, you can choose one of the following contact options:</p>
+            <p><strong>Email:</strong> You can send us an email at support@packstrack.com, and we will respond to your query as quickly as possible. Please provide detailed information regarding your inquiry so that we can assist you effectively.</p>
+            <p><strong>Contact Form:</strong> Alternatively, you can fill out the contact form below with your name, email address, and message. We encourage you to provide as much detail as possible to help us understand your request better. Once we receive your submission, one of our team members will get back to you promptly.</p>
         <div class="contact-child-controller">
           <div class="main-contact-data">
             <div class="contact-form">
@@ -46,6 +52,7 @@ session_destroy();
                   <button type="submit" class="bg-dark button-text" value="submit" name="submit">Send</button>
                 </div>
               </form>
+              <!-- =================Form End===================== -->
             </div>
           </div>
           <?php
@@ -65,6 +72,10 @@ session_destroy();
             </div>
           </div>
         </div>
+        <p><strong>Social Media:</strong> You can also reach out to us through our official social media channels. Follow us on Twitter and Facebook to stay updated with the latest news and announcements from PacksTrack. You can send us a direct message or post your query on our social media pages, and we'll respond as soon as we can.</p>
+        <p><strong>We're Here for You:</strong></p>
+        <p>At PacksTrack, we value your satisfaction and are committed to providing top-notch customer service. Our team is dedicated to ensuring that your experience with our platform is smooth and problem-free. Whether you have a general question, need technical support, or require assistance with a specific tracking issue, we're here to assist you every step of the way.</p>
+        <p>We appreciate your trust in PacksTrack and look forward to serving you. Reach out to us today, and let us help you with your courier tracking needs.</p>
       </div>
     </div>
   </div>
