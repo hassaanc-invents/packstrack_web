@@ -43,6 +43,9 @@ include "webcrawler.php";
                 <a class="nav-link text-light" href="contactus">Contact Us</a>
             </li>
             <li class="nav-item mr-3">
+                <a class="nav-link text-light" href="disclaimer">Disclaimer</a>
+            </li>
+            <li class="nav-item mr-3">
                 <a class="nav-link text-light" href="privacypolicy">Privacy Policy</a>
             </li>
         </ul>
