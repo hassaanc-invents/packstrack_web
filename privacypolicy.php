@@ -7,7 +7,7 @@ session_destroy();
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Packstrack</title>
+    <title>Packstrack | Privacy Policy</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
@@ -55,6 +55,34 @@ session_destroy();
 <p>We reserve the right to update or modify this Privacy Policy at any time without prior notice. We encourage you to review this policy periodically to stay informed about how we collect, use, and protect your personal information.</p>
 <p><strong>Contact Us:</strong></p>
 <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our privacy practices, please contact us at privacy@packstrack.com.</p>
+<h2>DMCA</h2>
+<p>PacksTrack respects the intellectual property rights of others and complies with the provisions of the Digital Millennium Copyright Act ("DMCA"). This policy outlines our procedures for responding to claims of copyright infringement and how to submit a DMCA takedown notice.</p>
+<p><strong>Reporting Copyright Infringement:</strong></p>
+<p>If you believe that your copyrighted work has been infringed upon on the PacksTrack website, please promptly send a written notification to our designated Copyright Agent containing the following information:</p>
+<p>Identification of the copyrighted work(s) claimed to have been infringed.</p>
+<p>Sufficient information to enable us to locate the infringing material, such as the URL(s) where the infringing material is located on our website.</p>
+<p>Your contact information, including your name, address, telephone number, and email address.</p>
+<p>A statement that you have a good faith belief that the use of the copyrighted material is not authorized by the copyright owner, its agent, or the law.</p>
+<p>A statement, made under penalty of perjury, that the information provided in your notice is accurate and that you are the copyright owner or authorized to act on behalf of the copyright owner.</p>
+<p>Your physical or electronic signature.</p>
+<p>Please send the DMCA takedown notice to our designated Copyright Agent:</p>
+<p>Copyright Agent:</p>
+<p>[Your Name]</p>
+<p>[Your Company Name]</p>
+<p>[Your Address]</p>
+<p>[City, State, ZIP]</p>
+<p>[Email Address]</p>
+<p>[Phone Number]</p>
+<p>Upon receipt of a valid DMCA takedown notice, we will expeditiously remove or disable access to the allegedly infringing material. We will also notify the user who posted the material, providing them an opportunity to submit a counter-notice if they believe the material was removed in error.</p>
+<p><strong>Counter-Notice Procedure:</strong></p>
+<p>If you believe that the material you posted on PacksTrack was removed or disabled by mistake or misidentification, you may submit a counter-notice to our Copyright Agent. The counter-notice must include the following information:</p>
+<p>Identification of the material that has been removed or disabled and the location where the material appeared before it was removed or disabled.</p>
+<p>Your contact information, including your name, address, telephone number, and email address.</p>
+<p>A statement, made under penalty of perjury, that you have a good faith belief that the material was removed or disabled as a result of mistake or misidentification.</p>
+<p>A statement that you consent to the jurisdiction of the federal district court in which your address is located or, if you are outside the United States, that you consent to the jurisdiction of the federal courts located in the district where the website operator is located.</p>
+<p>Your physical or electronic signature.</p>
+<p>Upon receipt of a valid counter-notice, we will provide a copy to the original complaining party and inform them that the removed material may be restored within ten business days, unless the Copyright Agent receives notification that legal action has been filed seeking a court order to restrain further infringement.</p>
+<p>Please note that submitting a false or misleading DMCA takedown notice or counter-notice may result in liability for damages, including costs and attorney's fees incurred by the alleged infringer or by PacksTrack.</p>
                                 <a href="contactus" class="btn btn-light px-5 rounded-pill shadow-sm bg-warning py-3">Write us an Email</a>
                             </div>
                         </div>

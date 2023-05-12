@@ -8,7 +8,7 @@ session_destroy();
 <html lang="en">
 
 <head>
-  <title>Packstrack</title>
+  <title>Packstrack | Contact Us</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
@@ -25,8 +25,8 @@ session_destroy();
       <?php
       include "nav.php";
       ?>
-      <div class="main-conatiner">
-        <h1>Contact Us</h1>
+      <div class="main-conatiner pt-5">
+        <h1 class="display-4 text-muted">Contact Us</h1>
             <p>Thank you for choosing PacksTrack as your go-to platform for worldwide courier tracking. We value your feedback, inquiries, and suggestions. Our dedicated support team is ready to assist you with any questions or concerns you may have.</p>
             <p><strong>How Can We Help You?</strong></p>
             <p>Whether you have a question about our tracking services, need assistance with a specific shipment, or want to provide feedback on your experience using PacksTrack, we're here to help. Our knowledgeable support staff is equipped to handle a wide range of inquiries and will provide prompt and reliable assistance.</p>
