@@ -9,6 +9,7 @@ session_destroy();
 <head>
   <meta name="google-site-verification" content="-Sbp2kb0u3gmLGhTEmk-Xx3q1pg5zg8AhEMfb7TmUUg" />
   <title>Packstrack</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8432842617381630" crossorigin="anonymous"></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
