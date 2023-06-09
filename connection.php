@@ -1,9 +1,6 @@
 <?php
-
-
-$conn = mysqli_connect("localhost","root","","trackingsystem");
-
-$baseURL = "http://localhost/packstrack_web";
+$conn = mysqli_connect("localhost","u552095459_trackingsystem","System1dev@track","u552095459_trackingsystem");
+$baseURL = "http://packstrack.com";
 function check_login($conn)
     {
         session_start();

@@ -7,8 +7,10 @@ session_destroy();
 <!doctype html>
 <html lang="en">
 <head>
+
   <meta name="google-site-verification" content="-Sbp2kb0u3gmLGhTEmk-Xx3q1pg5zg8AhEMfb7TmUUg" />
   <title>Packstrack</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8432842617381630" crossorigin="anonymous"></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
@@ -40,6 +42,14 @@ session_destroy();
                 <p class=" text-muted mb-4">
                   Thank you for visiting <b>Packstrack</b>. Here you will be able to track your package without any difficulty. All original data is provided through our website. Here you will be able to track your package and see its real-time status. We will provide you the tracking data all over the world. We have a direct link with all the courier companies. We have produced all the things that a user needs. We have uploaded all the courier company data on our <b>Packstrack</b> so that everyone can get the original full data.
                 </p>
+                <div>
+                    <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-format="fluid"
+                    data-ad-layout-key="-ex+g-1f-3w+ci"
+                    data-ad-client="ca-pub-8432842617381630"
+                    data-ad-slot="9356288607"></ins>
+                </div>
                 <p class=" text-muted mb-4">
                   On our website, you will be able to track your package immediately without wasting time, and here it is very simple and easy for you to track your package. You must have the tracking number of your package with which you can track your package. You have to enter your tracking number in our Search Bar and select your carrier then press the track button. In no time you will receive your package's current location. If you have any problem or your package gets lost or goes to the wrong one, we will give you the contact number and email of the courier so that you can contact them.
                 </p>
@@ -64,8 +74,8 @@ session_destroy();
               $finalFileOpen =  strtolower(str_replace(' ', '', $fileOpen));
           ?>
               <div class="col-lg-3 col-sm-6 mb-5">
-                <div class="bg-white rounded shadow-sm py-5 h-100"><a href="<?php if ($getSingleTrackCategory['have_subdomain'] == 1){ echo $getSingleTrackCategory['tracking_site_link'];} else {echo $finalFileOpen;} ?>" class="text-muted"><img src="<?php echo "./uploaded_files/" . $getSingleTrackCategory['blog_image_path']; ?>" alt="<?php echo  $getSingleTrackCategory['image_alt_tag']?>" width="100" height="100px" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"></a>
-                  <h6 class="mb-0"><a href="<?php if ($getSingleTrackCategory['have_subdomain'] == 1){ echo $getSingleTrackCategory['tracking_site_link'];} else {echo $finalFileOpen;}  ?>" class="text-muted"><?php echo $getSingleTrackCategory['tracking_site_name']; ?></a></h6><span class="small text-muted"><a href="<?php if ($getSingleTrackCategory['have_subdomain'] == 1){ echo $getSingleTrackCategory['tracking_site_link'];} else {echo $finalFileOpen;} ?>" class="text-muted"><u>Track</u></a></span>
+                  <div class="bg-white rounded shadow-sm py-5 h-100"><a href="<?php if ($getSingleTrackCategory['have_subdomain'] == 1){ echo $getSingleTrackCategory['tracking_site_link'];} else {echo $finalFileOpen;} ?>" class="text-muted"><img src="<?php echo "./uploaded_files/" . $getSingleTrackCategory['blog_image_path']; ?>" alt="<?php echo  $getSingleTrackCategory['image_alt_tag']?>" width="100" height="100px" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"></a>
+                  <h6 class="mb-0"><a href="<?php if ($getSingleTrackCategory['have_subdomain'] == 1){ echo $getSingleTrackCategory['tracking_site_link'];} else {echo $finalFileOpen;}  ?>" class="text-muted"><?php echo $getSingleTrackCategory['tracking_site_name']; ?></a></h6><span class="small text-muted"><a href="<?php if ($getSingleTrackCategory['have_subdomain'] == 1){ echo $getSingleTrackCategory['tracking_site_link'];} else {echo $finalFileOpen;}  ?>" class="text-muted"><u>Track</u></a></span>
                 </div>
               </div>
           <?php
@@ -86,6 +96,9 @@ session_destroy();
   <?php
   include "scripts.php";
   ?>
+  <script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};

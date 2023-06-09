@@ -8,6 +8,7 @@ session_destroy();
 <html lang="en">
 <head>
     <title>Packstrack - About Us</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8432842617381630" crossorigin="anonymous"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
@@ -36,7 +37,7 @@ session_destroy();
                     <div class="container py-5">
                         <div class="row align-items-center mb-5">
                             <div class="col order-2 order-lg-1"><i class="fa fa-bar-chart fa-2x mb-3 text-warning"></i>
-                             <!-- Abput Blog Start -->
+                                <!-- Abput Blog Start -->
 
                              <h1>About Us</h1>
                              <p>Welcome to PacksTrack &ndash; Your Trusted Worldwide Courier Tracking Companion!</p>

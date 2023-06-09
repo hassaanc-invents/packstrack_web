@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="//vrltracking.packstrack.com/main-sitemap.xsl"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<url>
+		<loc>https://vrltracking.packstrack.com/</loc>
+		<lastmod>2023-04-13T20:42:49+00:00</lastmod>
+		<image:image>
+			<image:loc>https://vrltracking.packstrack.com/wp-content/uploads/2023/04/1e131e4b-ecc3-452f-897c-763675a37bef.webp</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://vrltracking.packstrack.com/wp-content/uploads/2023/04/5f556394-1872-493c-bb11-8636b6f2f777.webp</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://vrltracking.packstrack.com/wp-content/uploads/2023/04/Screenshot-2023-04-11-024436.webp</image:loc>
+		</image:image>
+	</url>
+</urlset>

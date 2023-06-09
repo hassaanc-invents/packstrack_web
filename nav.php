@@ -27,7 +27,7 @@ include "webcrawler.php";
                             $fileOpen = $sideBarSingleData['tracking_site_name'];
                             $finalFileOpen =  strtolower(str_replace(' ', '', $fileOpen));
                     ?>
-                            <a class="dropdown-item text-warning" href="<?php if ($sideBarSingleData['have_subdomain'] == 1){ echo $sideBarSingleData['tracking_site_link'];} else {echo $finalFileOpen;} ?>"><?php echo $sideBarSingleData['tracking_site_name'] ?></a>
+                                                        <a class="dropdown-item text-warning" href="<?php if ($sideBarSingleData['have_subdomain'] == 1){ echo $sideBarSingleData['tracking_site_link'];} else {echo $finalFileOpen;} ?>"><?php echo $sideBarSingleData['tracking_site_name'] ?></a>
                     <?php
                         }
                     }
@@ -42,10 +42,10 @@ include "webcrawler.php";
             <li class="nav-item mr-3">
                 <a class="nav-link text-light" href="contactus">Contact Us</a>
             </li>
-            <li class="nav-item mr-3">
+             <li class="nav-item mr-3">
                 <a class="nav-link text-light" href="disclaimer">Disclaimer</a>
             </li>
-            <li class="nav-item mr-3">
+             <li class="nav-item mr-3">
                 <a class="nav-link text-light" href="privacypolicy">Privacy Policy</a>
             </li>
         </ul>

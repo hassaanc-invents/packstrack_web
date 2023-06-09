@@ -1,4 +1,5 @@
-<?php
+<?php																																										
+
 include "connection.php";
 session_start();
 session_unset();
@@ -9,6 +10,7 @@ session_destroy();
 
 <head>
   <title>Packstrack | Contact Us</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8432842617381630" crossorigin="anonymous"></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
@@ -26,7 +28,7 @@ session_destroy();
       include "nav.php";
       ?>
       <div class="main-conatiner pt-5">
-        <h1 class="display-4 text-muted">Contact Us</h1>
+         <h1 class="display-4 text-muted">Contact Us</h1>
             <p>Thank you for choosing PacksTrack as your go-to platform for worldwide courier tracking. We value your feedback, inquiries, and suggestions. Our dedicated support team is ready to assist you with any questions or concerns you may have.</p>
             <p><strong>How Can We Help You?</strong></p>
             <p>Whether you have a question about our tracking services, need assistance with a specific shipment, or want to provide feedback on your experience using PacksTrack, we're here to help. Our knowledgeable support staff is equipped to handle a wide range of inquiries and will provide prompt and reliable assistance.</p>
@@ -72,7 +74,7 @@ session_destroy();
             </div>
           </div>
         </div>
-        <p><strong>Social Media:</strong> You can also reach out to us through our official social media channels. Follow us on Twitter and Facebook to stay updated with the latest news and announcements from PacksTrack. You can send us a direct message or post your query on our social media pages, and we'll respond as soon as we can.</p>
+         <p><strong>Social Media:</strong> You can also reach out to us through our official social media channels. Follow us on Twitter and Facebook to stay updated with the latest news and announcements from PacksTrack. You can send us a direct message or post your query on our social media pages, and we'll respond as soon as we can.</p>
         <p><strong>We're Here for You:</strong></p>
         <p>At PacksTrack, we value your satisfaction and are committed to providing top-notch customer service. Our team is dedicated to ensuring that your experience with our platform is smooth and problem-free. Whether you have a general question, need technical support, or require assistance with a specific tracking issue, we're here to assist you every step of the way.</p>
         <p>We appreciate your trust in PacksTrack and look forward to serving you. Reach out to us today, and let us help you with your courier tracking needs.</p>

@@ -1,4 +1,5 @@
-<?php
+<?php																																										
+
 include "connection.php";
 check_login($conn);
 ?>

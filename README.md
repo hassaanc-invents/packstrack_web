@@ -1,1 +1,0 @@
-This is PacksTrack Website developed by Hassan Malick. This is private property as well.
