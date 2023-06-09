@@ -24,7 +24,7 @@
             <label class="form-check-label text-light" for="exampleCheck1">Save Tracking ID</label>
         </div>
         <div>
-            <button type="submit" name="submit" value="submit" class="btn btn-warning px-5 rounded-pill shadow-sm text-dark" style="padding-left: 30px; padding-right: 30px;">Track</button>
+            <button type="submit" name="submit" value="submit" class="btn btn-primary px-5 rounded-pill shadow-sm text-dark" style="padding-left: 30px; padding-right: 30px;">Track</button>
         </div>
     </div>
 </form>
