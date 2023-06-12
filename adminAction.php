@@ -1,10 +1,10 @@
 <?php
-$adminCountQuery = "SELECT * FROM admin_information";
+$adminCountQuery = "SELECT COUNT(*) as count FROM admin_information";
 $adminCountRun = mysqli_query($conn, $adminCountQuery) or die("Rows Cant Count");
-$adminCountTotal = mysqli_num_rows($adminCountRun);
-$blogCountQuery = "SELECT * FROM blog_information";
+$adminCountTotal = $adminCountRun->fetch_assoc();
+$blogCountQuery = "SELECT COUNT(*) as count FROM blog_information";
 $blogCountRun = mysqli_query($conn, $blogCountQuery) or die("Rows Cant Count");
-$blogCountTotal = mysqli_num_rows($blogCountRun);
+$blogCountTotal = $blogCountRun->fetch_assoc();
 $blogTitleQuery = "SELECT * from blog_information ORDER BY blog_id DESC";
 $blogTitleResult = mysqli_query($conn, $blogTitleQuery);
 ?>
@@ -17,9 +17,9 @@ $blogTitleResult = mysqli_query($conn, $blogTitleQuery);
                     <div class="card-body">
                         <h3 class="text-light">Total Admin</h3>
                         <h4 class="display-4 text-light">
-                            <?php echo $adminCountTotal ?>
+                            <?php echo $adminCountTotal['count'] ?>
                         </h4>
-                        <button href="#" class="btn btn-outline-light px-5 py-2" disabled>View</button>
+                        <button href="#" class="btn btn-primary text-light px-5 py-2" disabled>View</button>
                     </div>
                 </div>
             </div>
@@ -29,10 +29,10 @@ $blogTitleResult = mysqli_query($conn, $blogTitleQuery);
                         <h3 class="text-light">Total Blogs</h3>
                         <h4 class="display-4 text-light">
                             <?php
-                            echo $blogCountTotal;
+                            echo $blogCountTotal['count'];
                             ?>
                         </h4>
-                        <button href="#" class="btn btn-outline-light px-5 py-2" disabled>View</button>
+                        <button href="#" class="btn btn-primary px-5 py-2" disabled>View</button>
                     </div>
                 </div>
             </div>
@@ -40,12 +40,14 @@ $blogTitleResult = mysqli_query($conn, $blogTitleQuery);
         <div class="col-md-9">
             <div class="row">
                 <div class="col-md-5 mb-2">
-                    <a href="addBlogModal?edit=false&editid=false&fileName=false" class="btn btn-dark btn-block text-white">
+                    <a href="addBlogModal?edit=false&editid=false&fileName=false"
+                        class="btn btn-dark btn-block text-white">
                         Add Artical
                     </a>
                 </div>
                 <div class="col-md-5 mb-2">
-                    <button type="button" class="btn btn-dark btn-block" data-toggle="modal" data-target="#blogModalVisits">
+                    <button type="button" class="btn btn-dark btn-block" data-toggle="modal"
+                        data-target="#blogModalVisits">
                         View Visits
                     </button>
                 </div>
@@ -70,23 +72,29 @@ $blogTitleResult = mysqli_query($conn, $blogTitleQuery);
                             while ($blogTitleSingleResult = mysqli_fetch_assoc($blogTitleResult)) {
                                 $fileName = strtolower($blogTitleSingleResult['tracking_site_name'] . '.php');
                                 $finalFileName = str_replace(' ', '', $fileName);
-                        ?>
+                                ?>
                                 <tr>
-                                    <td class="py-3 col-sm-8"><?php echo $blogTitleSingleResult['blog_title'] ?></td>
-                                    <td class="py-3 col-sm-2"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+                                    <td class="py-3 col-sm-8">
+                                        <?php echo $blogTitleSingleResult['blog_title'] ?>
+                                    </td>
+                                    <td class="py-3 col-sm-2"><button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#exampleModalLong">
                                             Delete
                                         </button></td>
-                                    <td class="py-3 col-sm-2"> <?php if ($blogTitleSingleResult['have_subdomain'] == 1) {
-                                                                ?>
+                                    <td class="py-3 col-sm-2">
+                                        <?php if ($blogTitleSingleResult['have_subdomain'] == 1) {
+                                            ?>
                                             <a href="#" class="btn btn-primary px-4">Not</a>
-                                        <?php
-                                                                } else {
-                                        ?>
-                                            <a href="addBlogModal?edit=true&editid=<?php echo $blogTitleSingleResult['blog_id'] ?>&fileName=<?php echo $finalFileName ?>" class="btn btn-primary px-4">Edit</a>
-                                        <?php
-                                                                } ?>
+                                            <?php
+                                        } else {
+                                            ?>
+                                            <a href="addBlogModal?edit=true&editid=<?php echo $blogTitleSingleResult['blog_id'] ?>&fileName=<?php echo $finalFileName ?>"
+                                                class="btn btn-primary px-4">Edit</a>
+                                            <?php
+                                        } ?>
                                     </td>
-                                    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog"
+                                        aria-labelledby="exampleModalLongTitle" aria-hidden="true">
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">
@@ -96,17 +104,21 @@ $blogTitleResult = mysqli_query($conn, $blogTitleQuery);
                                                     </button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    <p class="text-danger">Are You Sure You want to Delete this Blog?. You will be Unable to revert this change.</p>
+                                                    <p class="text-danger">Are You Sure You want to Delete this Blog?. You will
+                                                        be Unable to revert this change.</p>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <button type="button" class="btn btn-dark" data-dismiss="modal">Cancel</button>
-                                                    <a class="btn btn-primary text-light" href="deleteBlog?deleteid=<?php echo $blogTitleSingleResult['blog_id'] ?>&fileName=<?php echo $finalFileName ?>">Delete Forever</a>
+                                                    <button type="button" class="btn btn-dark"
+                                                        data-dismiss="modal">Cancel</button>
+                                                    <a class="btn btn-primary text-light"
+                                                        href="deleteBlog?deleteid=<?php echo $blogTitleSingleResult['blog_id'] ?>&fileName=<?php echo $finalFileName ?>">Delete
+                                                        Forever</a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </tr>
-                        <?php
+                                <?php
                             }
                         }
                         ?>
@@ -118,7 +130,8 @@ $blogTitleResult = mysqli_query($conn, $blogTitleQuery);
 </div>
 
 
-<div class="modal fade" id="blogModalVisits" tabindex="-1" role="dialog" aria-labelledby="blogModalVisits" aria-hidden="true">
+<div class="modal fade" id="blogModalVisits" tabindex="-1" role="dialog" aria-labelledby="blogModalVisits"
+    aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -129,14 +142,9 @@ $blogTitleResult = mysqli_query($conn, $blogTitleQuery);
             </div>
             <div class="modal-body">
                 <?php
-                $totalVisitsQuery = "SELECT * from our_visitors";
+                $totalVisitsQuery = "SELECT COUNT(*) as count FROM our_visitors";
                 $runtotalVistsQuery = mysqli_query($conn, $totalVisitsQuery);
-                $totalVisits = 0;
-                if (mysqli_num_rows($runtotalVistsQuery) > 0) {
-                    while ($singleVisits = mysqli_fetch_assoc($runtotalVistsQuery)) {
-                        $totalVisits = $totalVisits + $singleVisits['total_visits'];
-                    }
-                }
+                $visitCount = $runtotalVistsQuery->fetch_assoc();
                 ?>
                 <div class="row">
                     <div class=" offset-md-3 col-md-6">
@@ -145,7 +153,7 @@ $blogTitleResult = mysqli_query($conn, $blogTitleQuery);
                                 <h3 class="text-light">Total Visits</h3>
                                 <h4 class="display-4 text-light">
                                     <?php
-                                    echo $totalVisits;
+                                    echo $visitCount['count'];
                                     ?>
                                 </h4>
 
