@@ -99,8 +99,8 @@ $blogTitleResult = mysqli_query($conn, $blogTitleQuery);
                                                     <p class="text-danger">Are You Sure You want to Delete this Blog?. You will be Unable to revert this change.</p>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <button type="button" class="btn btn-success" data-dismiss="modal">Cancel</button>
-                                                    <a class="btn btn-danger text-light" href="deleteBlog?deleteid=<?php echo $blogTitleSingleResult['blog_id'] ?>&fileName=<?php echo $finalFileName ?>">Delete Forever</a>
+                                                    <button type="button" class="btn btn-dark" data-dismiss="modal">Cancel</button>
+                                                    <a class="btn btn-primary text-light" href="deleteBlog?deleteid=<?php echo $blogTitleSingleResult['blog_id'] ?>&fileName=<?php echo $finalFileName ?>">Delete Forever</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -155,8 +155,8 @@ $blogTitleResult = mysqli_query($conn, $blogTitleQuery);
                 </div>
             </div>
             <div class="modal-footer d-flex justify-content-between">
-                <a class="btn btn-success px-5" href=<?php echo "vistordetails" ?>>Details</a>
-                <button type="button" class="btn btn-warning px-5 text-light" data-dismiss="modal">Close</button>
+                <a class="btn btn-dark px-5" href=<?php echo "vistordetails" ?>>Details</a>
+                <button type="button" class="btn btn-dark px-5 text-light" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>

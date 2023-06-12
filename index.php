@@ -77,7 +77,7 @@ session_destroy();
         <?php
         if (!$totalRecords < 8) {
         ?>
-          <a href="trackingcompanies" class="btn btn-warning px-5 rounded-pill shadow-sm mb-5">Track More</a>
+          <a href="trackingcompanies" class="btn btn-primary px-5 rounded-pill shadow-sm mb-5">Track More</a>
         <?php
         }
         ?>

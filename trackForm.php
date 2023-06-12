@@ -9,7 +9,7 @@
         </div>
         <input type="text" name="blogId"  value="<?php echo $blogId?>" class="form-control" hidden>
         <div>
-            <button type="submit" name="submit" value="submit" class="btn btn-primary text-light" style="padding-left: 30px; padding-right: 30px;">Track</button>
+            <button type="submit" name="submit" value="submit" class="btn btn-dark text-light" style="padding-left: 30px; padding-right: 30px;">Track</button>
         </div>
     </div>
 </form>
